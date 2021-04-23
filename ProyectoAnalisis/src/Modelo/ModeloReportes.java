@@ -5,6 +5,7 @@ import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class ModeloReportes {
@@ -12,9 +13,18 @@ public class ModeloReportes {
     private String Aldea;
     private Date FechaIni;
     private Date FechaFin;
+    private String Resultado;
 
     public String getAldea() {
         return Aldea;
+    }
+
+    public String getResultado() {
+        return Resultado;
+    }
+
+    public void setResultado(String Resultado) {
+        this.Resultado = Resultado;
     }
 
     public void setAldea(String Aldea) {
@@ -37,26 +47,24 @@ public class ModeloReportes {
         this.FechaFin = FechaFin;
     }
     
-    public void GenerarReporte()
+    public ArrayList GenerarAldeas()
     {
-        long FechaInicio  = this.FechaIni.getTime();
-        long FechaFin  = this.FechaFin.getTime();
-        
-        java.sql.Date Inicial = new java.sql.Date(FechaInicio);
-        java.sql.Date Final = new java.sql.Date(FechaFin);
-        
+       ArrayList<String> Lista = new ArrayList<String>();
       try{
             Statement sql = (Statement) Conexion.getConexion().createStatement();
             
-            String consulta = "Consulta;";
+            String consulta = "SELECT AL_NombreAldea FROM PRO_Aldea;";
             ResultSet resultado = sql.executeQuery(consulta);
-            String cadena = resultado.toString();
             
-            System.out.println(cadena);
+            while(resultado.next())
+            {
+                Lista.add(resultado.getString("AL_NombreAldea"));
+            }
+            
         }catch(SQLException ex){
             System.out.println(ex.toString());
             }
-
+      return Lista;
+      
     }
-    
 }

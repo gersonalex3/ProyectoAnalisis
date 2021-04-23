@@ -5,46 +5,22 @@
  */
 package Vista;
 
-import Modelo.Conexion;
-import com.toedter.calendar.JDateChooser;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.beans.Statement;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import java.sql.*;
-import java.util.Calendar;
-import java.util.Date;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author alx_g
  */
-public class Reportes extends javax.swing.JFrame {
+public class VistaReportes extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
 
-    public Reportes() {
+    public VistaReportes() {
         initComponents();
         
-        this.setLocationRelativeTo(null);
-        
-        this.getContentPane().setBackground(Color.white);
-        
-        CAldea.add("");
-        CAldea.add("Aldea1");
-        CAldea.add("Aldea2");
     }
     
-
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -228,33 +204,7 @@ public class Reportes extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void BtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGenerarActionPerformed
-        
-        if(jAldea.isVisible())
-        {
-            if(CAldea.getSelectedIndex()==0)
-            {
-                JOptionPane.showMessageDialog(null, "Favor seleccionar la aldea", 
-                         "Error" ,JOptionPane.ERROR_MESSAGE);   
-            }
-        }
-            
-        try{
-            Date fechaIni = jDateIni.getDate();
-            Date fechaFin = jDateFin.getDate();
-        
-            long FechaInicio  = fechaIni.getTime();
-            long FechaFin  = fechaFin.getTime();
-        
-            java.sql.Date Inicial = new java.sql.Date(FechaInicio);
-            java.sql.Date Final = new java.sql.Date(FechaFin);
-        
-            JOptionPane.showMessageDialog(null, Inicial);
-            JOptionPane.showMessageDialog(null, Final);
-                }catch(Exception e){
-                if(jAldea.isVisible() && CAldea.getSelectedIndex()!=0){
-                        JOptionPane.showMessageDialog(null, "No se encontraron fechas", 
-                         "Error" ,JOptionPane.ERROR_MESSAGE);}
-        }
+
     }//GEN-LAST:event_BtnGenerarActionPerformed
 
     /**
@@ -274,32 +224,34 @@ public class Reportes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Reportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Reportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Reportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Reportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Reportes().setVisible(true);
+                new VistaReportes().setVisible(true);
                 
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnGenerar;
-    private java.awt.Choice CAldea;
-    private javax.swing.JLabel jAldea;
-    private com.toedter.calendar.JDateChooser jDateFin;
-    private com.toedter.calendar.JDateChooser jDateIni;
+    public javax.swing.JButton BtnGenerar;
+    public java.awt.Choice CAldea;
+    public javax.swing.JLabel jAldea;
+    public com.toedter.calendar.JDateChooser jDateFin;
+    public com.toedter.calendar.JDateChooser jDateIni;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

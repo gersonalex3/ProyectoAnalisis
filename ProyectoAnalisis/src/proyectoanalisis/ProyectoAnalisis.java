@@ -5,7 +5,10 @@
  */
 package proyectoanalisis;
 
+import Controlador.ControladorReportes;
 import Modelo.Conexion;
+import Modelo.ModeloReportes;
+import Vista.VistaReportes;
 import java.sql.*;
 /**
  *
@@ -17,25 +20,13 @@ public class ProyectoAnalisis {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ClassNotFoundException {
-        Vista.Reportes f = new Vista.Reportes();
-        f.setVisible(true);
         
+        ModeloReportes mod = new ModeloReportes();
+        VistaReportes view = new VistaReportes();
         
-        /*Connection con = Conexion.getConexion();
-        
-        System.out.println(con);
-        
-        try{
-            Statement sql = (Statement) Conexion.getConexion().createStatement();
-            
-            String consulta = "SELECT * FROM PRO_Estatus;";
-            ResultSet resultado = sql.executeQuery(consulta);
-            String cadena = resultado.toString();
-            
-            System.out.println(cadena);
-        }catch(SQLException ex){
-            System.out.println(ex.toString());
-        }*/
+        ControladorReportes ctrl = new ControladorReportes(view, mod);
+        ctrl.iniciar();
+        view.setVisible(true);
 
     }
     

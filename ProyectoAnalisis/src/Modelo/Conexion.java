@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo;
 
 import java.sql.*;
 
 public class Conexion {
+    
+    private Connection con;
     
     public static Connection getConexion(){
         
@@ -24,8 +21,5 @@ public class Conexion {
             System.out.println(ex.toString());
             return null;
         }
-        
-       
-        
     }
 }
