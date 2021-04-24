@@ -1,7 +1,6 @@
 
 package Controlador;
 
-import Modelo.Conexion;
 import Modelo.ModeloReportes;
 import Vista.VistaReportes;
 import java.awt.Color;
@@ -11,7 +10,6 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
@@ -90,7 +88,7 @@ public class ControladorReportes implements ActionListener{
                     try{
                             JasperReport reporte = null;
             
-                            String path = "src\\Reportes\\ReporteAldeas.jasper";
+                            String path = "src\\Reportes\\ReporteAldea.jasper";
                             reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
             
                             Map parametros2 = new HashMap();
@@ -114,7 +112,7 @@ public class ControladorReportes implements ActionListener{
                     try{
                             JasperReport reporte = null;
             
-                            String path = "src\\Reportes\\ReporteFechas.jasper";
+                            String path = "src\\Reportes\\ReporteFecha.jasper";
                             reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
             
                             Map parametros = new HashMap();

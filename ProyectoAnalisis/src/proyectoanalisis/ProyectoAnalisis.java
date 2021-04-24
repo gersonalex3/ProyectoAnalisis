@@ -27,7 +27,6 @@ public class ProyectoAnalisis {
         ControladorReportes ctrl = new ControladorReportes(view, mod);
         ctrl.iniciar();
         view.setVisible(true);
-
     }
     
 }
