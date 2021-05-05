@@ -46,7 +46,7 @@ public class VistaReportes extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("NOTAS DE TRABAJO");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);

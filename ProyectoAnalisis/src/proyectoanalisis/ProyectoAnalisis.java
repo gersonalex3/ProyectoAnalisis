@@ -5,10 +5,12 @@
  */
 package proyectoanalisis;
 
+import Controlador.ControladorRegistro;
 import Controlador.ControladorReportes;
 import Modelo.Conexion;
+import Modelo.ModeloRegistro;
 import Modelo.ModeloReportes;
-import Vista.VistaReportes;
+import Vista.*;
 import java.sql.*;
 /**
  *
@@ -16,17 +18,33 @@ import java.sql.*;
  */
 public class ProyectoAnalisis {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws ClassNotFoundException {
+
+    public static void main(String[] args){
         
+        Home view = new Home();
+        view.setVisible(true);
+        view.setLocationRelativeTo(null);
+
+    }
+    
+    public static void NuevaNota()
+    {
+        VistaRegistro view= new VistaRegistro();
+        ModeloRegistro mod= new ModeloRegistro();
+        ControladorRegistro controlaC= new ControladorRegistro(view, mod);
+        view.setVisible(true);
+        view.setLocationRelativeTo(null);
+        controlaC.Iniciar();
+    }
+    
+    public static void NuevoReporte()
+    {
         ModeloReportes mod = new ModeloReportes();
         VistaReportes view = new VistaReportes();
         
         ControladorReportes ctrl = new ControladorReportes(view, mod);
         ctrl.iniciar();
-        view.setVisible(true);
+        view.setVisible(true); 
     }
     
 }
