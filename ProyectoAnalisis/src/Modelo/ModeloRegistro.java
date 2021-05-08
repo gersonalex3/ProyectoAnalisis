@@ -206,9 +206,7 @@ public class ModeloRegistro {
         } catch(Exception e){
         }
    return insertar;
-   
-        
-   
+
    }   
     
   public ArrayList GenerarCalidad()

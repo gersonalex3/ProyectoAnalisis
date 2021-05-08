@@ -62,7 +62,7 @@ public class ModeloReportes {
             }
             
         }catch(SQLException ex){
-            System.out.println(ex.toString());
+            Lista.add(ex.toString());
             }
       return Lista;
       

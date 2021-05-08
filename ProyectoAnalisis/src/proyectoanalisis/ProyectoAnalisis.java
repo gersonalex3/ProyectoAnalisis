@@ -6,12 +6,12 @@
 package proyectoanalisis;
 
 import Controlador.ControladorRegistro;
+import Controlador.ControladorRegistroPersonal;
 import Controlador.ControladorReportes;
-import Modelo.Conexion;
 import Modelo.ModeloRegistro;
+import Modelo.ModeloRegistroPersonal;
 import Modelo.ModeloReportes;
 import Vista.*;
-import java.sql.*;
 /**
  *
  * @author alx_g
@@ -31,6 +31,7 @@ public class ProyectoAnalisis {
     {
         VistaRegistro view= new VistaRegistro();
         ModeloRegistro mod= new ModeloRegistro();
+        
         ControladorRegistro controlaC= new ControladorRegistro(view, mod);
         view.setVisible(true);
         view.setLocationRelativeTo(null);
@@ -43,6 +44,16 @@ public class ProyectoAnalisis {
         VistaReportes view = new VistaReportes();
         
         ControladorReportes ctrl = new ControladorReportes(view, mod);
+        ctrl.iniciar();
+        view.setVisible(true); 
+    }
+    
+        public static void NuevoPersonal()
+    {
+        ModeloRegistroPersonal mod = new ModeloRegistroPersonal();
+        VistaRegistroPersonal view = new VistaRegistroPersonal();
+        
+        ControladorRegistroPersonal ctrl = new ControladorRegistroPersonal(view, mod);
         ctrl.iniciar();
         view.setVisible(true); 
     }
