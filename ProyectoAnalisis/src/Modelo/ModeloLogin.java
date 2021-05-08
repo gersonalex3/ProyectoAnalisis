@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 
 public class ModeloLogin {
@@ -37,7 +36,9 @@ public class ModeloLogin {
     public void setPerfil(String Perfil) {
         this.Perfil = Perfil;
     }
+
     
+ 
     public String IngresoUsuario()
     {
         try{

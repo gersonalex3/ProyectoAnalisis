@@ -37,8 +37,12 @@ public class ProyectoAnalisis {
     public static void Home()
     {
         Home view = new Home();
+        ModeloLogin mod = new ModeloLogin();
+        ControladorHome controlaC = new ControladorHome(view, mod);
+        
         view.setVisible(true);
         view.setLocationRelativeTo(null);
+        controlaC.iniciar();
     }
     
     public static void NuevaNota()
@@ -78,6 +82,16 @@ public class ProyectoAnalisis {
         VistaRegistroAldea view = new VistaRegistroAldea();
         
         ControladorAldea ctrl = new ControladorAldea(view, mod);
+        ctrl.iniciar();
+        view.setVisible(true); 
+    }
+    
+        public static void NuevoUsuario()
+    {
+        ModeloUsuario mod = new ModeloUsuario();
+        VistaRegistroUsuario view = new VistaRegistroUsuario();
+        
+        ControladorUsuario ctrl = new ControladorUsuario(view, mod);
         ctrl.iniciar();
         view.setVisible(true); 
     }

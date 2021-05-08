@@ -29,46 +29,59 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jBtnCerrar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuNuevo = new javax.swing.JMenu();
+        jMenuNota = new javax.swing.JMenuItem();
+        jMenuPersonal = new javax.swing.JMenuItem();
+        jMenuAldea = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuReportes = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Nuevo");
+        jBtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnCerrar.setText("Cerrar Sesión");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setText("Nota de Trabajo");
+        jMenuNuevo.setText("Nuevo");
+
+        jMenuNota.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuNota.setText("Nota de Trabajo");
+        jMenuNota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuNotaActionPerformed(evt);
+            }
+        });
+        jMenuNuevo.add(jMenuNota);
+
+        jMenuPersonal.setText("Personal");
+        jMenuPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuPersonalActionPerformed(evt);
+            }
+        });
+        jMenuNuevo.add(jMenuPersonal);
+
+        jMenuAldea.setText("Aldea");
+        jMenuAldea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAldeaActionPerformed(evt);
+            }
+        });
+        jMenuNuevo.add(jMenuAldea);
+
+        jMenuItem1.setText("Usuario");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenuNuevo.add(jMenuItem1);
 
-        jMenuItem3.setText("Personal");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem3);
+        jMenuBar1.add(jMenuNuevo);
 
-        jMenuItem4.setText("Aldea");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem4);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Reportes");
+        jMenuReportes.setText("Reportes");
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem2.setText("Nuevo Reporte");
@@ -77,9 +90,9 @@ public class Home extends javax.swing.JFrame {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+        jMenuReportes.add(jMenuItem2);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenuReportes);
 
         setJMenuBar(jMenuBar1);
 
@@ -87,33 +100,41 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 653, Short.MAX_VALUE)
+                .addComponent(jBtnCerrar))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 529, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jBtnCerrar)
+                .addGap(0, 506, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuNotaActionPerformed
 
         ProyectoAnalisis.NuevaNota();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuNotaActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
 
         ProyectoAnalisis.NuevoReporte();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuPersonalActionPerformed
         ProyectoAnalisis.NuevoPersonal();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuPersonalActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuAldeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAldeaActionPerformed
         ProyectoAnalisis.NuevaAldea();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuAldeaActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ProyectoAnalisis.NuevoUsuario();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,12 +172,14 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JButton jBtnCerrar;
+    public javax.swing.JMenuItem jMenuAldea;
+    public javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
+    public javax.swing.JMenuItem jMenuNota;
+    private javax.swing.JMenu jMenuNuevo;
+    public javax.swing.JMenuItem jMenuPersonal;
+    public javax.swing.JMenu jMenuReportes;
     // End of variables declaration//GEN-END:variables
 }
