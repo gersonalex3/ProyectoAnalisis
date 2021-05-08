@@ -5,12 +5,10 @@
  */
 package proyectoanalisis;
 
-import Controlador.ControladorRegistro;
-import Controlador.ControladorRegistroPersonal;
-import Controlador.ControladorReportes;
-import Modelo.ModeloRegistro;
-import Modelo.ModeloRegistroPersonal;
-import Modelo.ModeloReportes;
+import Controlador.*;
+
+import Modelo.*;
+
 import Vista.*;
 /**
  *
@@ -21,10 +19,26 @@ public class ProyectoAnalisis {
 
     public static void main(String[] args){
         
+        Login();
+
+    }
+    
+    public static void Login()
+    {
+        Login view = new Login();
+        ModeloLogin mod = new ModeloLogin();
+        ControladorLogin controlaC= new ControladorLogin(view, mod);
+        
+        view.setVisible(true);
+        view.setLocationRelativeTo(null);
+        controlaC.iniciar();
+    }
+    
+    public static void Home()
+    {
         Home view = new Home();
         view.setVisible(true);
         view.setLocationRelativeTo(null);
-
     }
     
     public static void NuevaNota()
@@ -54,6 +68,16 @@ public class ProyectoAnalisis {
         VistaRegistroPersonal view = new VistaRegistroPersonal();
         
         ControladorRegistroPersonal ctrl = new ControladorRegistroPersonal(view, mod);
+        ctrl.iniciar();
+        view.setVisible(true); 
+    }
+        
+    public static void NuevaAldea()
+    {
+        ModeloAldea mod = new ModeloAldea();
+        VistaRegistroAldea view = new VistaRegistroAldea();
+        
+        ControladorAldea ctrl = new ControladorAldea(view, mod);
         ctrl.iniciar();
         view.setVisible(true); 
     }

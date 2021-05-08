@@ -3,7 +3,6 @@ package Modelo;
 
 import java.sql.*;
 
-
 public class ModeloRegistroPersonal {
     
     private int IdPersonal;

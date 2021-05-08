@@ -32,6 +32,7 @@ public class VistaReportes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -271,6 +272,7 @@ public class VistaReportes extends javax.swing.JFrame {
     public javax.swing.JButton BtnGenerar;
     public java.awt.Choice CAldea;
     public javax.swing.JLabel jAldea;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     public com.toedter.calendar.JDateChooser jDateFin;
     public com.toedter.calendar.JDateChooser jDateIni;
     private javax.swing.JLabel jLabel1;
