@@ -96,9 +96,8 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addGap(20, 20, 20))
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(166, 166, 166)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18))
+                .addGap(184, 184, 184)
+                .addComponent(jLabel2))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

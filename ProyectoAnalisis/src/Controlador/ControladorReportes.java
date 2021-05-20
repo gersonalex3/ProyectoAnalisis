@@ -88,7 +88,7 @@ public class ControladorReportes implements ActionListener{
                     try{
                             JasperReport reporte = null;
             
-                            String path = "src\\Reportes\\ReporteAldea.jasper";
+                            String path = "..\\src\\Reportes\\ReporteAldea.jasper";
                             reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
             
                             Map parametros2 = new HashMap();
@@ -112,7 +112,7 @@ public class ControladorReportes implements ActionListener{
                     try{
                             JasperReport reporte = null;
             
-                            String path = "src\\Reportes\\ReporteFecha.jasper";
+                            String path = "..\\src\\Reportes\\ReporteFecha.jasper";
                             reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
             
                             Map parametros = new HashMap();

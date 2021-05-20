@@ -30,6 +30,7 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         jBtnCerrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuNuevo = new javax.swing.JMenu();
         jMenuNota = new javax.swing.JMenuItem();
@@ -39,10 +40,15 @@ public class Home extends javax.swing.JFrame {
         jMenuReportes = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jBtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnCerrar.setBackground(new java.awt.Color(236, 211, 4));
+        jBtnCerrar.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jBtnCerrar.setForeground(new java.awt.Color(6, 5, 195));
         jBtnCerrar.setText("Cerrar Sesión");
+        jBtnCerrar.setBorder(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Home.png"))); // NOI18N
 
         jMenuNuevo.setText("Nuevo");
 
@@ -100,15 +106,15 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 653, Short.MAX_VALUE)
-                .addComponent(jBtnCerrar))
+            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(864, 864, 864)
+                .addComponent(jBtnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jBtnCerrar)
-                .addGap(0, 506, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBtnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -173,6 +179,7 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jBtnCerrar;
+    private javax.swing.JLabel jLabel1;
     public javax.swing.JMenuItem jMenuAldea;
     public javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;

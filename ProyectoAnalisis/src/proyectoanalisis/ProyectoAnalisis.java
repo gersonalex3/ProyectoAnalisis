@@ -47,10 +47,10 @@ public class ProyectoAnalisis {
     
     public static void NuevaNota()
     {
-        VistaRegistro view= new VistaRegistro();
-        ModeloRegistro mod= new ModeloRegistro();
+        VistaRegistroNota view= new VistaRegistroNota();
+        ModeloRegistroNota mod= new ModeloRegistroNota();
         
-        ControladorRegistro controlaC= new ControladorRegistro(view, mod);
+        ControladorRegistroNota controlaC= new ControladorRegistroNota(view, mod);
         view.setVisible(true);
         view.setLocationRelativeTo(null);
         controlaC.Iniciar();
